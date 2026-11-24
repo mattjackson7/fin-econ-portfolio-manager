@@ -10,7 +10,7 @@ An automated portfolio manager that turns a client's profile (wealth, risk toler
 | [Name] | [username] | [e.g. client profiles and objective] |
 | [Name] | [username] | [e.g. inputs and optimizer] |
 | [Name] | [username] | [e.g. backtesting and stress tests] |
-| [Name] | [username] | [e.g. dashboard] |
+| Mason Walton | H4xWow | Dashboard |
 
 ## Project layout
 

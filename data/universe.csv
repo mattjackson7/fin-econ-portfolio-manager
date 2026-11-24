@@ -1,0 +1,12 @@
+ticker,name,asset_class,esg_label
+SPY,SPDR S&P 500 ETF,US equity,0
+EFA,iShares MSCI EAFE ETF,Developed ex-US equity,0
+EEM,iShares MSCI Emerging Markets ETF,Emerging market equity,0
+AGG,iShares Core US Aggregate Bond ETF,US bonds,0
+TLT,iShares 20+ Year Treasury Bond ETF,Long Treasuries,0
+LQD,iShares Investment Grade Corporate Bond ETF,Corporate bonds,0
+GLD,SPDR Gold Shares,Gold,0
+VNQ,Vanguard Real Estate ETF,Real estate,0
+ESGU,iShares ESG Aware MSCI USA ETF,US equity (ESG),1
+ESGD,iShares ESG Aware MSCI EAFE ETF,Developed ex-US equity (ESG),1
+EAGG,iShares ESG Aware US Aggregate Bond ETF,US bonds (ESG),1

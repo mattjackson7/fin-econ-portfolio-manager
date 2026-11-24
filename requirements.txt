@@ -1,0 +1,9 @@
+streamlit
+pandas
+numpy
+scipy
+scikit-learn
+plotly
+yfinance
+pytest
+# cvxpy  (add later if we use CVaR optimization)

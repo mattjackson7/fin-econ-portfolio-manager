@@ -10,7 +10,7 @@ An automated portfolio manager that turns a client's profile (wealth, risk toler
 | [Name] | [username] | [e.g. client profiles and objective] |
 | [Name] | [username] | [e.g. inputs and optimizer] |
 | [Name] | [username] | [e.g. backtesting and stress tests] |
-| [Name] | [username] | [e.g. dashboard] |
+| Mason Walton | H4xWow | Dashboard |
 
 ## Project layout
 
@@ -48,6 +48,17 @@ Do this before you start working and again before you close the Codespace.
 A strategy is a function that takes a DataFrame of daily returns (the past window only) and returns target weights as a `pd.Series` indexed by fund ticker, long-only and summing to 1. Benchmarks and the AI manager all follow this shape, so `models/backtest.py` can run any of them. Expected returns and covariances passed to the optimizer must be annualized.
 
 [Update this section as the team agrees on signatures.]
+
+## Planned: portfolio chat assistant
+
+Not started. The design is still to be decided as a team; it depends on the dashboard being built first.
+
+The idea is a small chat panel in the dashboard, connected to the Claude API, where a client (or we, during the presentation) can ask questions such as "why am I only 40% in stocks?" or "what happens if I retire at 65 instead?".
+
+- **It explains; it does not decide.** The portfolio always comes from our models. The assistant is given the client's profile, `PortfolioSpec` (including `spec.reasons`) and the explanation from `build_portfolio`, and answers from those. It should not invent its own allocations or recommend specific trades.
+- **What-if questions call our code.** If we let it change inputs (retirement age, risk tolerance, goals), it should re-run `profile_to_spec` and `build_portfolio` through tool use, so every number it quotes comes from the model.
+- **API key.** Each person keeps the key in `.streamlit/secrets.toml` (already ignored by git) or the `ANTHROPIC_API_KEY` environment variable. Never commit it. Agree as a team whose key is used and set a spending limit on it.
+- **Open questions:** who builds it; whether it can run what-ifs or only explain; how it is presented in the report (it is a front end to the model, not part of the "AI" that makes decisions).
 
 ## Data
 

@@ -2,7 +2,7 @@
 
 ## Fund universe
 
-`universe.csv` lists the funds: ticker, name, asset class, and an ESG label (1 for ESG-labelled funds). This list is a draft. Verify the tickers and names, and change the file to change the universe everywhere.
+`universe.csv` lists the funds: ticker, name, asset class, bucket (`equity`, `bonds` or `real_assets`, used for client asset-class limits), and an ESG label. An optional `ref_weight` column (e.g. market cap) sets each fund's share of its bucket in the reference portfolio; without it, funds in a bucket share equally (1 for ESG-labelled funds). This list is a draft. Verify the tickers and names, and change the file to change the universe everywhere.
 
 ESG-labelled funds are a proxy, since detailed ESG ratings are often paid. They were launched around 2016 to 2018 [confirm inception dates], so they have no data for 2008. A 2008 stress test must use a universe without them (pick the columns before calling `daily_returns`).
 
